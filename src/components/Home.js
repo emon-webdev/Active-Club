@@ -25,12 +25,11 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setBreaks(data))
     }, [])
-
+    
     const handleAddToList = (time) => {
         const oldTime = parseInt(time) + parseInt(times);
         setTimes(oldTime)
     }
-
 
     const handleAddToBreak = (breakTime) => {
         setBreakTime(breakTime)
