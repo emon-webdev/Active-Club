@@ -31,8 +31,22 @@ const Home = () => {
         setTimes(oldTime)
     }
 
+    // add break time
     const handleAddToBreak = (breakTime) => {
+        console.log( breakTime)
+
+        const prevLsTimeParse = localStorage.getItem('time');
+        const prevLsTime = JSON.parse(prevLsTimeParse);
+        
+        console.log(prevLsTime)
+        
+        
+
+
+
         setBreakTime(breakTime)
+
+
     }
 
     //tostHandler

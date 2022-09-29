@@ -9,7 +9,7 @@ const Blog = () => {
                     How does react work?
                 </div>
                 <div class="collapse-content">
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                    <p>React uses a declarative paradigm that makes it easier to reason about your application and aims to be both efficient and flexible</p>
                 </div>
             </div>
 
@@ -31,10 +31,13 @@ const Blog = () => {
             </div>
             <div tabindex="1" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div class="collapse-title text-xl font-medium">
-                    Focus me to see content
+                useEffect use cases
                 </div>
                 <div class="collapse-content">
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                    <p> validating input field.</p>
+                    <p>fetch API data </p>
+                    <p>live filtering </p>
+                    <p>trigger animation on new array value </p>
                 </div>
             </div>
         </div>
