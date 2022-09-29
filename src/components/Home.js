@@ -33,20 +33,16 @@ const Home = () => {
 
     // add break time
     const handleAddToBreak = (breakTime) => {
-        console.log( breakTime)
 
-        const prevLsTimeParse = localStorage.getItem('time');
+        const prevLsTimeParse = localStorage.getItem('Time');
         const prevLsTime = JSON.parse(prevLsTimeParse);
-        
-        console.log(prevLsTime)
-        
-        
 
-
-
+        if (prevLsTime) {
+            localStorage.setItem('Time', JSON.stringify([...prevLsTime, breakTime ]))
+        } else {
+            localStorage.setItem('Time', JSON.stringify([breakTime]))
+        }
         setBreakTime(breakTime)
-
-
     }
 
     //tostHandler
