@@ -70,16 +70,19 @@ const Home = () => {
                     </div>
                     <div className='flex justify-between items-center break-time bg-slate-300 rounded-lg p-3'>
                         <button className="btn btn-circle btn-outline">
-                            <FaFacebookF />
+                            <a href="#"><FaFacebookF /></a>
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            <FaFacebookMessenger />
+                            <a href="#"><FaFacebookMessenger /></a>
+                            
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            <FaLinkedin />
+                            <a href="#"><FaLinkedin /></a>
+                            
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            <FaInstagramSquare />
+                            <a href="#"><FaInstagramSquare /></a>
+                            
                         </button>
                     </div>
                     <div className='break-content my-5'>
@@ -88,7 +91,7 @@ const Home = () => {
                             {
                                 breaks.map(singleBreak =>
                                     <div key={singleBreak.id} >
-                                        <p onClick={() => handleAddToBreak(singleBreak.time)} className="btn btn-circle btn-outline">{singleBreak.time}</p>
+                                        <p onClick={() => handleAddToBreak(singleBreak.time)} className="btn  btn-sm btn-circle btn-outline">{singleBreak.time}</p>
                                     </div>
                                 )
                             }
