@@ -3,11 +3,26 @@ import React from 'react';
 const ExerciseDetails = () => {
     return (
         <div>
-           <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
+            
         </div>
     );
 };
 
 export default ExerciseDetails;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// এই কাজটা আপনি অনেকভাবেই করতে পারেন !! আপনি যদি বাটনগুলো হার্ডকোডে করে থাকেন তাহলে বাটন এবং ডিটেইলস যেখানে দেখাবেন তার কমন কম্পোনেন্টে useState নিয়ে একটা Event Handler ডিক্লিয়ার করে দেন এবং Event Handler এ state কে সেট করে দেন প্যারামিটার হিসাবে !!! তারপর হ্যান্ডলার কে বাটন এ বসিয়ে দিবেন ভিন্ন ভিন্ন প্যারামিটার হিসাবে !!! আমি ভাই সবটাই বলে দিয়েছি আশা করছি এখন পেরে যাবেন !!!
