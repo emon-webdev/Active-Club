@@ -1,11 +1,19 @@
 [
     {
+        "id": "6334d08b02a2669609351269",
+        "picture": "https://i.ibb.co/S7z7qm5/dambal-ex.jpg",
+        "age": 27,
+        "name": "Earlene Hansen",
+        "time": "55",
+        "about": "Sit nulla irure consectetur adipisicing fugiat nulla aute non. Lorem nostrud do nisi quis. Laborum ad ut proident adipisicing aliqua ut consequat in minim exercitation dolore sint consequat."
+    },
+    {
         "id": "6334cffe3242e8f13228c415",
         "picture": "https://i.ibb.co/rt993gk/treadmill-mec.jpg",
         "age": 33,
         "time": "15",
         "name": "Tracey Jennings",
-        "about": "Aliquip officia sunt qui ut aliquip duis fugiat sit nisi non nisi minim in."
+        "about": "Aliquip officia sunt qui ut aliquip duis fugiat sit nisi non nisi minim in. aliqua ut consequat in minim exercitation dolore sint consequat."
     },
     {
         "id": "6334cffe15403aee18cb80a9",
@@ -54,14 +62,6 @@
         "name": "Lorena Burton",
         "time": "45",
         "about": "Tempor nulla sit laborum aliqua reprehenderit esse ex laborum cupidatat irure. Ex velit consequat labore laborum. Pariatur pariatur deserunt quis labore non irure irure elit voluptate. Cillum nisi do dolor irure reprehenderit aliquip ut. Quis minim ipsum id"
-    },
-    {
-        "id": "6334d08b02a2669609351269",
-        "picture": "https://i.ibb.co/S7z7qm5/dambal-ex.jpg",
-        "age": 27,
-        "name": "Earlene Hansen",
-        "time": "55",
-        "about": "Sit nulla irure consectetur adipisicing fugiat nulla aute non. Lorem nostrud do nisi quis. Laborum ad ut proident adipisicing aliqua ut consequat in minim exercitation dolore sint consequat."
     },
     {
         "id": "6334d08bc7f29188284ed383",

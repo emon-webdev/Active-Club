@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { FaFacebookF, FaFacebookMessenger, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
-import Swal from 'sweetalert2';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import logo from '../img/favicon.jpg';
 import profile from '../img/main_photo-2.jpg';
 import Exercise from './Exercise';
 
+
 const Home = () => {
+    // fake card data
     const [exercises, setExercises] = useState([]);
     const [times, setTimes] = useState(0);
+
+    //break data
     const [breaks, setBreaks] = useState([]);
     const [breakTime, setBreakTime] = useState(0);
-
 
     // card data
     useEffect(() => {
@@ -18,6 +22,11 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setExercises(data))
     }, [])
+    // add to list
+    const handleAddToList = (time) => {
+        const oldTime = parseInt(time) + parseInt(times);
+        setTimes(oldTime)
+    }
 
     //break time data
     useEffect(() => {
@@ -26,33 +35,37 @@ const Home = () => {
             .then(data => setBreaks(data))
     }, [])
 
-    const handleAddToList = (time) => {
-        const oldTime = parseInt(time) + parseInt(times);
-        setTimes(oldTime)
-    }
-
-    // add break time
-    const handleAddToBreak = (breakTime) => {
-
+    // local storage get data
+    useEffect(() => {
         const prevLsTimeParse = localStorage.getItem('Time');
         const prevLsTime = JSON.parse(prevLsTimeParse);
-
         if (prevLsTime) {
-            localStorage.setItem('Time', JSON.stringify([...prevLsTime, breakTime ]))
+            setBreakTime(prevLsTime)
         } else {
-            localStorage.setItem('Time', JSON.stringify([breakTime]))
+            setBreakTime(0)
         }
-        setBreakTime(breakTime)
+    }, [breakTime])
+
+
+    // add break time
+    const handleAddToBreak = (break_time) => {
+        localStorage.setItem('Time', JSON.stringify(break_time))
+        setBreakTime(break_time)
     }
+
+
 
     //tostHandler
     const tostHandler = () => {
-        Swal.fire({
-            icon: 'success',
-            title: 'Congratulations! Done your activity',
-            showConfirmButton: false,
-            timer: 1500
-        })
+        toast('🦄 Congratulations! Done your activity!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
 
 
@@ -91,19 +104,18 @@ const Home = () => {
                     </div>
                     <div className='flex justify-between items-center break-time bg-slate-300 rounded-lg p-3'>
                         <button className="btn btn-circle btn-outline">
-                            <a href="#"><FaFacebookF /></a>
+                            <a href="/"><FaFacebookF /></a>
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            <a href="#"><FaFacebookMessenger /></a>
+                            <a href="/"><FaFacebookMessenger /></a>
 
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            <a href="#"><FaLinkedin /></a>
+                            <a href="/"><FaLinkedin /></a>
 
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            <a href="#"><FaInstagramSquare /></a>
-
+                            <a href="/"><FaInstagramSquare /></a>
                         </button>
                     </div>
                     <div className='break-content my-5'>
@@ -130,7 +142,10 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='text-center mt-6'>
-                        <button onClick={tostHandler} className="btn w-full btn-primary  my-3">Activity Completed</button>
+                        <button onClick={tostHandler} className="btn w-full btn-primary  my-3">
+                            Activity Completed
+                            <ToastContainer />
+                        </button>
                     </div>
                 </div>
             </div>
