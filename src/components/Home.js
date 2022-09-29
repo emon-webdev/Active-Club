@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { FaFacebookF, FaFacebookMessenger, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import logo from '../img/favicon.jpg';
+import profile from '../img/main_photo-2.jpg';
 import Exercise from './Exercise';
 
 
@@ -31,7 +33,6 @@ const Home = () => {
 
 
     const handleAddToBreak = (breakTime) => {
-        console.log(breakTime)
         setBreakTime(breakTime)
     }
 
@@ -40,14 +41,14 @@ const Home = () => {
 
             <div className="exercise-area">
                 <div className="exercise-container pt-[60px]">
-                    <div className='flex items-center '>
-                        <img className="w-[50px] h-[45px] mr-3" src={logo} alt="" srcSet="" />
+                    <div className=' flex items-center logo md:justify-center'>
+                        <img className="w-[50px] h-[45px] mr-3 " src={logo} alt="" srcSet="" />
                         <span className='text-4xl font-bold text-blue-700 drop-shadow'>
                             GYM CLUB
                         </span>
                     </div>
-                    <h2 className='text-xl font-bold'>Select today's exercise</h2>
-                    <div className="exercise-content ">
+                    <h2 className='text-xl my-5 today font-bold'>Select today's exercise</h2>
+                    <div className="exercise-content">
                         {
                             exercises.map(exercise =>
                                 <Exercise
@@ -60,9 +61,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="exercise-schedule p-4  pt-9 shadow-lg">
+                <div className="exercise-schedule p-4 py-5 pt-9 shadow-lg">
                     <div className="profile-info flex items-center mb-4">
-                        <img className="w-[50px] h-[45px] mr-4" src={logo} alt="" srcSet="" />
+                        <img className="w-[50px] h-[50px] mr-4" src={profile} alt="" srcSet="" />
                         <div>
                             <h2 className='font-bold text-lg text-blue-700'>Emon Hossain</h2>
                             <p className='text-fuchsia-900 text-sm font-semibold'>Junior Web Developer</p>
@@ -70,19 +71,19 @@ const Home = () => {
                     </div>
                     <div className='flex justify-between items-center break-time bg-slate-300 rounded-lg p-3'>
                         <button className="btn btn-circle btn-outline">
-                            10s
+                            <FaFacebookF />
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            10s
+                            <FaFacebookMessenger />
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            10s
+                            <FaLinkedin />
                         </button>
                         <button className="btn btn-circle btn-outline">
-                            10s
+                            <FaInstagramSquare />
                         </button>
                     </div>
-                    <div className='break-content mb-4'>
+                    <div className='break-content my-5'>
                         <h2 className='text-xl font-bold mb-3'>Add A Break</h2>
                         <div className='flex flex-wrap justify-between items-center break-time bg-slate-300 rounded-lg p-3'>
                             {
