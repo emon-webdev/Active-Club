@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { FaFacebookF, FaFacebookMessenger, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 import logo from '../img/favicon.jpg';
 import profile from '../img/main_photo-2.jpg';
 import Exercise from './Exercise';
-
 
 const Home = () => {
     const [exercises, setExercises] = useState([]);
@@ -25,7 +25,7 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setBreaks(data))
     }, [])
-    
+
     const handleAddToList = (time) => {
         const oldTime = parseInt(time) + parseInt(times);
         setTimes(oldTime)
@@ -34,6 +34,17 @@ const Home = () => {
     const handleAddToBreak = (breakTime) => {
         setBreakTime(breakTime)
     }
+
+    //tostHandler
+    const tostHandler = () => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Congratulations! Done your activity',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+
 
     return (
         <div className='home-page'>
@@ -74,15 +85,15 @@ const Home = () => {
                         </button>
                         <button className="btn btn-circle btn-outline">
                             <a href="#"><FaFacebookMessenger /></a>
-                            
+
                         </button>
                         <button className="btn btn-circle btn-outline">
                             <a href="#"><FaLinkedin /></a>
-                            
+
                         </button>
                         <button className="btn btn-circle btn-outline">
                             <a href="#"><FaInstagramSquare /></a>
-                            
+
                         </button>
                     </div>
                     <div className='break-content my-5'>
@@ -109,7 +120,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='text-center mt-6'>
-                        <button className="btn w-full btn-primary  my-3">Activity Completed</button>
+                        <button onClick={tostHandler} className="btn w-full btn-primary  my-3">Activity Completed</button>
                     </div>
                 </div>
             </div>
