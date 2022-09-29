@@ -5,14 +5,28 @@ import Exercise from './Exercise';
 
 const Home = () => {
     const [exercises, setExercises] = useState([]);
+    const [times, setTimes] = useState({});
 
     useEffect(() => {
         fetch('fakeData.json')
             .then(res => res.json())
             .then(data => setExercises(data))
-
     }, [])
 
+    const handleAddToList = (time) => {
+        const oldTime = parseInt(time)
+
+        const newTime = [...times, oldTime];
+        
+        console.log(typeof oldTime)
+        // const oldTime = {time.time};
+/*         const prevTime = parseInt(time + time);
+        // console.log(oldTime)
+        console.log(prevTime)
+        setTimes(time) */
+    }
+
+    console.log(newTime)
 
     return (
         <div className='home-page'>
@@ -22,7 +36,7 @@ const Home = () => {
                     <div className='flex items-center '>
                         <img className="w-[90px] h-[60px] mr-3" src={logo} alt="" srcset="" />
                         <span className='text-4xl font-bold text-blue-700 drop-shadow'>
-                        GYM CLUB
+                            GYM CLUB
                         </span>
                     </div>
                     <h2 className='text-xl font-bold'>Select today's exercise</h2>
@@ -32,6 +46,7 @@ const Home = () => {
                                 <Exercise
                                     key={exercise.id}
                                     exercise={exercise}
+                                    handleAddToList={handleAddToList}
                                 />
                             )
                         }
@@ -62,8 +77,10 @@ const Home = () => {
                     </div>
                     <div className="exercise-details">
                         <h2 className='text-xl font-bold mb-3'>Exercise Details</h2>
-                        <h3>exercise time</h3>
-                        <h3>exercise time</h3>
+                        <div className='flex justify-between items-center p-3'>
+                            <h3>exercise time</h3>
+                            <p>{times.time}s</p>
+                        </div>
                     </div>
                     <button class="btn btn-primary my-3">Activity Completed</button>
                 </div>

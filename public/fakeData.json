@@ -3,7 +3,7 @@
         "id": "6334cffe3242e8f13228c415",
         "picture": "https://i.ibb.co/rt993gk/treadmill-mec.jpg",
         "age": 33,
-        "time": "15s",
+        "time": "15",
         "name": "Tracey Jennings",
         "about": "Aliquip officia sunt qui ut aliquip duis fugiat sit nisi non nisi minim in."
     },
@@ -12,7 +12,7 @@
         "picture": "https://i.ibb.co/xhC63FH/motor-mec.jpg",
         "age": 34,
         "name": "Landry Munoz",
-        "time": "20s",
+        "time": "20",
         "about": "Duis id adipisicing mollit ea esse officia sunt ea eiusmod in quis eu ipsum adipisicing. Aliqua sit aliqua labore ipsum sint mollit ex laboris. Ullamco veniam mollit non"
     },
     {
@@ -20,7 +20,7 @@
         "picture": "https://i.ibb.co/m0r0nKC/bicep-curl.jpg",
         "age": 39,
         "name": "Tiffany Montgomery",
-        "time": "25s",
+        "time": "25",
         "about": "Reprehenderit eiusmod duis occaecat nisi amet nulla excepteur aute exercitation cillum. Officia occaecat quis ipsum anim officia ame"
     },
     {
@@ -28,7 +28,7 @@
         "picture": "https://i.ibb.co/4PNY90g/tricep-pulldown.jpg",
         "age": 24,
         "name": "Rosetta Kemp",
-        "time": "30s",
+        "time": "30",
         "about": "Fugiat amet duis et labore culpa. Officia laborum commodo non laborum sunt exercitation aliqua ullamco. Anim velit laboru"
     },
     {
@@ -36,7 +36,7 @@
         "picture": "https://i.ibb.co/5Wpn6mx/straigt-arm.jpg",
         "age": 25,
         "name": "Frazier Kim",
-        "time": "35s",
+        "time": "35",
         "about": "Aute ipsum voluptate deserunt occaecat ullamco fugiat aliqua fugiat adipisicing. Adipisicing esse id velit do cillum minim commodo mollit commodo ex."
     },
     {
@@ -44,7 +44,7 @@
         "picture": "https://i.ibb.co/qJW4VnD/Abdominal-mec.jpg",
         "age": 31,
         "name": "Lopez Bowen",
-        "time": "40s",
+        "time": "40",
         "about": "Ullamco occaecat Lorem anim irure in sunt irure exercitation magna consequat cupidatat exercitation cillum. Dolor mollit do ea in officia mollit reprehenderit dolor sit aliqua. Et nisi proident fugiat fugiat labore aute. Adipisicing laborum commodo enim excepteur non eu commodo do sint consequat"
     },
     {
@@ -52,7 +52,7 @@
         "picture": "https://i.ibb.co/D1J7ysY/bike-ex.jpg",
         "age": 26,
         "name": "Lorena Burton",
-        "time": "45s",
+        "time": "45",
         "about": "Tempor nulla sit laborum aliqua reprehenderit esse ex laborum cupidatat irure. Ex velit consequat labore laborum. Pariatur pariatur deserunt quis labore non irure irure elit voluptate. Cillum nisi do dolor irure reprehenderit aliquip ut. Quis minim ipsum id"
     },
     {
@@ -60,14 +60,14 @@
         "picture": "https://i.ibb.co/S7z7qm5/dambal-ex.jpg",
         "age": 27,
         "name": "Earlene Hansen",
-        "time": "55s",
+        "time": "55",
         "about": "Sit nulla irure consectetur adipisicing fugiat nulla aute non. Lorem nostrud do nisi quis. Laborum ad ut proident adipisicing aliqua ut consequat in minim exercitation dolore sint consequat."
     },
     {
         "id": "6334d08bc7f29188284ed383",
         "picture": "https://i.ibb.co/6rkQtkr/leg-ex.jpg",
         "age": 25,
-        "time": "50s",
+        "time": "50",
         "name": "Ophelia Holden",
         "about": "Aliquip minim officia ex quis commodo Lorem. Consectetur eiusmod eu ullamco veniam laborum consequat cupidatat irure "
     }
