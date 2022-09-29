@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../img/logo-fitness.png';
+import logo from '../img/favicon.jpg';
 import Exercise from './Exercise';
 
 
@@ -7,7 +7,7 @@ const Home = () => {
     const [exercises, setExercises] = useState([]);
     const [times, setTimes] = useState(0);
     const [breaks, setBreaks] = useState([]);
-    const [breakTime, setBreakTime] = useState([]);
+    const [breakTime, setBreakTime] = useState(0);
 
 
     // card data
@@ -30,9 +30,10 @@ const Home = () => {
     }
 
 
-    // const handleAddToBreak = (breakTime) => {
-    //     setBreakTime(breakTime)
-    // }
+    const handleAddToBreak = (breakTime) => {
+        console.log(breakTime)
+        setBreakTime(breakTime)
+    }
 
     return (
         <div className='home-page'>
@@ -40,7 +41,7 @@ const Home = () => {
             <div className="exercise-area">
                 <div className="exercise-container pt-[60px]">
                     <div className='flex items-center '>
-                        <img className="w-[90px] h-[60px] mr-3" src={logo} alt="" srcSet="" />
+                        <img className="w-[50px] h-[45px] mr-3" src={logo} alt="" srcSet="" />
                         <span className='text-4xl font-bold text-blue-700 drop-shadow'>
                             GYM CLUB
                         </span>
@@ -59,12 +60,12 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="exercise-schedule p-4 shadow-lg">
-                    <div className="profile-info flex items-center">
-                        <img src="" alt="" srcSet="" />
+                <div className="exercise-schedule p-4  pt-9 shadow-lg">
+                    <div className="profile-info flex items-center mb-4">
+                        <img className="w-[50px] h-[45px] mr-4" src={logo} alt="" srcSet="" />
                         <div>
-                            <h2>Emon Hossain</h2>
-                            <p>Junior Web Developer</p>
+                            <h2 className='font-bold text-lg text-blue-700'>Emon Hossain</h2>
+                            <p className='text-fuchsia-900 text-sm font-semibold'>Junior Web Developer</p>
                         </div>
                     </div>
                     <div className='flex justify-between items-center break-time bg-slate-300 rounded-lg p-3'>
@@ -86,8 +87,8 @@ const Home = () => {
                         <div className='flex flex-wrap justify-between items-center break-time bg-slate-300 rounded-lg p-3'>
                             {
                                 breaks.map(singleBreak =>
-                                    <div key={singleBreak.id}>
-                                        <p>{singleBreak.time}</p>
+                                    <div key={singleBreak.id} >
+                                        <p onClick={() => handleAddToBreak(singleBreak.time)} className="btn btn-circle btn-outline">{singleBreak.time}</p>
                                     </div>
                                 )
                             }
@@ -100,8 +101,8 @@ const Home = () => {
                             <p>{times} seconds</p>
                         </div>
                         <div className='flex justify-between items-center mb-4 bg-slate-300 rounded-lg p-3'>
-                            <h3 className='text-lg font-semibold'>Exercise time</h3>
-                            <p>{times} seconds</p>
+                            <h3 className='text-lg font-semibold'>Break time</h3>
+                            <p>{breakTime} seconds</p>
                         </div>
                     </div>
                     <div className='text-center mt-6'>
